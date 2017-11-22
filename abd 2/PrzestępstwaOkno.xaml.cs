@@ -1,27 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using abdModel;
 
 namespace abd_2
 {
+    /// <inheritdoc />
     /// <summary>
     /// Logika interakcji dla klasy PrzestępstwaOkno.xaml
     /// </summary>
-    public partial class PrzestępstwaOkno : Window
+    public partial class PrzestępstwaOkno
     {
-        public PrzestępstwaOkno()
-        {
+        public PrzestępstwaOkno() {
             InitializeComponent();
+            foreach (Przestępstwo value in Enum.GetValues(typeof(Przestępstwo)))
+                ListBox.Items.Add(value);
         }
     }
 }

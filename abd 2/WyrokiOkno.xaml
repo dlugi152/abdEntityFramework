@@ -8,9 +8,9 @@
         Title="WyrokiOkno" Height="300" Width="300">
     <Grid>
         <ListBox Name="ListBox"  HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="166"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="208,239,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click_2"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="207,126,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="dodaj" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="usuń" HorizontalAlignment="Left" Margin="208,239,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click_2"/>
+        <Button Content="Zmień/wyśw" HorizontalAlignment="Left" Margin="207,126,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

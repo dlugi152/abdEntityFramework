@@ -52,7 +52,10 @@ namespace abd_2
             Przeladuj();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e) {
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (ListBox.SelectedItem == null)
+                return;
             Wyrok item = Enumerable.FirstOrDefault(aaa.Wyroks,
                                                    aaaZajecia => aaaZajecia.NrSprawy == (int)ListBox.SelectedItem);
             if (item == null)
@@ -81,7 +84,10 @@ namespace abd_2
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e) {
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (ListBox.SelectedItem == null)
+                return;
             Wyrok item = Enumerable.FirstOrDefault(aaa.Wyroks,
                                                    aaaZajecia => aaaZajecia.NrSprawy == (int)ListBox.SelectedItem);
             if (item == null)

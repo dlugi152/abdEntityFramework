@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:abd_2"
         mc:Ignorable="d"
         Title="HarmonogramOkno" Height="300" Width="300">
     <Grid>
         <ListBox Name="ListBox"  HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="166"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="208,239,0,0" VerticalAlignment="Top" Width="74"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="207,126,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="dodaj" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="usuń" HorizontalAlignment="Left" Margin="208,239,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click_2"/>
+        <Button Content="Zmień/wyśw" HorizontalAlignment="Left" Margin="207,126,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="transakcja" HorizontalAlignment="Left" Margin="208,181,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
 
     </Grid>
 </Window>
