@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using abdModel;
 using abd_2.DataModel;
 
@@ -13,7 +14,6 @@ namespace abd_2
     /// </summary>
     public partial class WyrokiOkno : Window
     {
-        private abdModel.abdModel aaa = new abdModel.abdModel();
         private Random random = new Random();
 
         public WyrokiOkno() {
@@ -21,13 +21,17 @@ namespace abd_2
             Przeladuj();
         }
 
-        private void Przeladuj() {
+        private void Przeladuj()
+        {
+            abdModel.abdModel aaa = new abdModel.abdModel();
             ListBox.Items.Clear();
             foreach (Wyrok zajecia in aaa.Wyroks)
                 ListBox.Items.Add(zajecia.NrSprawy);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            abdModel.abdModel aaa = new abdModel.abdModel();
             int next = random.Next();
             try {
                 Skazany skz = Enumerable.FirstOrDefault(aaa.Skazanies);
@@ -52,10 +56,10 @@ namespace abd_2
             Przeladuj();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+        private void Button_Click_1(object sender, RoutedEventArgs e) {
             if (ListBox.SelectedItem == null)
                 return;
+            abdModel.abdModel aaa = new abdModel.abdModel();
             Wyrok item = Enumerable.FirstOrDefault(aaa.Wyroks,
                                                    aaaZajecia => aaaZajecia.NrSprawy == (int)ListBox.SelectedItem);
             if (item == null)
@@ -84,10 +88,10 @@ namespace abd_2
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
+        private void Button_Click_2(object sender, RoutedEventArgs e) {
             if (ListBox.SelectedItem == null)
                 return;
+            abdModel.abdModel aaa = new abdModel.abdModel();
             Wyrok item = Enumerable.FirstOrDefault(aaa.Wyroks,
                                                    aaaZajecia => aaaZajecia.NrSprawy == (int)ListBox.SelectedItem);
             if (item == null)
@@ -100,6 +104,13 @@ namespace abd_2
                 MessageBox.Show(ex.Message);
             }
             Przeladuj();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e) {
+            if (ListBox.SelectedItem == null)
+                return;
+            abdModel.abdModel aaa = new abdModel.abdModel();
+            MessageBox.Show(aaa.Punkty((int)ListBox.SelectedItem).ToString());
         }
     }
 }
